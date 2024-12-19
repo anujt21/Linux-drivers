@@ -1,0 +1,1 @@
+savedcmd_/home/prospero/Linux-drivers/3_gpioctrl/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/prospero/Linux-drivers/3_gpioctrl/Module.symvers -T /home/prospero/Linux-drivers/3_gpioctrl/modules.order -i Module.symvers -e 

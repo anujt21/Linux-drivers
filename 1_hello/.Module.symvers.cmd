@@ -1,0 +1,1 @@
+savedcmd_/home/prospero/Linux-drivers/1_hello/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/prospero/Linux-drivers/1_hello/Module.symvers -T /home/prospero/Linux-drivers/1_hello/modules.order -i Module.symvers -e 
