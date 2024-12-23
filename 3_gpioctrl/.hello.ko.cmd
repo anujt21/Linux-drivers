@@ -1,1 +1,0 @@
-savedcmd_/home/prospero/Linux-drivers/2_better_hello/hello.ko := ld -r -EL  -maarch64elf -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T arch/arm64/module.lds -o /home/prospero/Linux-drivers/2_better_hello/hello.ko /home/prospero/Linux-drivers/2_better_hello/hello.o /home/prospero/Linux-drivers/2_better_hello/hello.mod.o;  true

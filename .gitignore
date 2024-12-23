@@ -1,1 +1,7 @@
+*.o
+*.c
+*.ko
+*.mod.c
+*.symvers
+*.mod
 

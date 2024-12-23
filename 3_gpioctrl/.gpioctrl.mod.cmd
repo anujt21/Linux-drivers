@@ -1,1 +1,0 @@
-savedcmd_/home/prospero/Linux-drivers/3_gpioctrl/gpioctrl.mod := printf '%s\n'   gpioctrl.o | awk '!x[$$0]++ { print("/home/prospero/Linux-drivers/3_gpioctrl/"$$0) }' > /home/prospero/Linux-drivers/3_gpioctrl/gpioctrl.mod
