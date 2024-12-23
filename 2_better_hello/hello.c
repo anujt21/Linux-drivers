@@ -1,6 +1,7 @@
 #include <linux/module.h>
 #include <linux/init.h>
 
+// test comment
 //Codec function when module is loaded into the kernel
 //Static limits the visibility and linkage of the functions. Can be only called within this module
 // __init and __exit macros only improve the readabililty of the functions
