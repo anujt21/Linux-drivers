@@ -1,0 +1,1 @@
+savedcmd_/home/prospero/Linux-drivers/5_hello_cdev/hello_cdev.mod := printf '%s\n'   hello_cdev.o | awk '!x[$$0]++ { print("/home/prospero/Linux-drivers/5_hello_cdev/"$$0) }' > /home/prospero/Linux-drivers/5_hello_cdev/hello_cdev.mod
