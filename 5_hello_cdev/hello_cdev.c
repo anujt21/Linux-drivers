@@ -21,6 +21,8 @@ static int close_driver(struct inode *device_file, struct file *instance){
 	return 0;
 }
 
+
+//File operations object
 static struct file_operations fops = {
 	.owner = THIS_MODULE,
 	.read = read_func,
@@ -33,7 +35,10 @@ static struct file_operations fops = {
 // __init and __exit macros only improve the readabililty of the functions
 static int __init m_init(void)
 {	
-	major = register_chrdev(0, "hello-cdev", &fops); //this creates a new device files with given label and the first unused device number
+	//this creates a new device file with given label and the first unused device number (0). 
+	//A specific device number can be given in place of 0. 
+	//The last argument is a pointer to the file operations object
+	major = register_chrdev(0, "hello-cdev", &fops);
 
 	if(major<0){
 		printk("Error registering hello_cdev\n");
