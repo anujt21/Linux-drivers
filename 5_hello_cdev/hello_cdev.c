@@ -10,8 +10,17 @@ static ssize_t read_func (struct file *f, char __user *u, size_t l, loff_t *o){
 	printk("Read function is called.\n");
 	return 0;
 }
+
+//Return value of open and release is int: 0 for success, -1 for fail
+//inode is a kernel structure to represent a file. Using this structure
+//we can obtain major and minor device numbers of the opened device file.
 static int open_driver(struct inode *device_file, struct file *instance){
-	printk("hello-cdev driver was opened!\n");
+	pr_info("hello-cdev - Major: %d, Minor %d\n", imajor(device_file), iminor(device_file));
+
+	pr_info("hello-cdev - instance->f_pos: %lld\n", instance->f_pos);
+	pr_info("hello-cdev - instance->f_mode: 0x%x\n", instance->f_mode);
+	pr_info("hello-cdev - instance->f_flag: 0x%x\n", instance->f_flags);
+		
 	return 0;
 }
 
@@ -41,11 +50,11 @@ static int __init m_init(void)
 	major = register_chrdev(0, "hello-cdev", &fops);
 
 	if(major<0){
-		printk("Error registering hello_cdev\n");
+		pr_err("Error registering hello_cdev\n");
 		return major;
 	}
 		
-	printk("Major device number for hello_cdev: %d\n", major);
+	pr_info("Major device number for hello_cdev: %d\n", major);
 	return 0;
 }
 
