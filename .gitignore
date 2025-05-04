@@ -1,3 +1,4 @@
+#Compiled Object files
 *.o
 *.order
 *.ko
@@ -5,3 +6,43 @@
 *.symvers
 *.mod
 *.cmd
+*.obj
+
+# Precompiled Header
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Build directories
+dbuild/
+build/
+bin/
+out/
+
+# Editor-specific files
+.vscode/
+.idea/
+*.swp
+*~
+
+# clangd cache
+.cache/
+.clangd/
+
+# Compile commands
+compile_commands.json
