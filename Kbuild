@@ -1,1 +1,1 @@
-obj-m := log_level.o
+obj-m := kernel_module.o
