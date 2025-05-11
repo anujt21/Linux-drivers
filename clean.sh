@@ -39,6 +39,7 @@ find . -name "*.mod.c" -exec rm -f {} \;
 find . -name "*.cmd" -exec rm -f {} \;
 find . -name "Module.symvers" -exec rm -f {} \;
 find . -name "modules.order" -exec rm -f {} \;
+find . -name "Kbuild" -exec rm -f {} \;
 echo "✓ Removed all object files and kernel module artifacts"
 
 echo "=== Cleanup complete! ==="
