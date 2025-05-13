@@ -24,9 +24,9 @@ endif()
 message(STATUS "Building for architecture: $ENV{ARCH}")
 message(STATUS "Using cross compiler: $ENV{CROSS_COMPILE}")
 
-# Kernel source directory
+# Kernel source directory. Default set to ~/Anuj/linux.
 if(NOT DEFINED ENV{KDIR})
-  set(KERNEL_DIR "$ENV{HOME}/linux")
+    set(KERNEL_DIR "$ENV{HOME}/Anuj/linux")
 else()
   set(KERNEL_DIR "$ENV{KDIR}")
 endif()

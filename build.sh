@@ -20,13 +20,13 @@ fi
 
 # Check for required environment variables
 if [ -z "$ARCH" ]; then
-  echo "ERROR: ARCH environment variable not set"
-  exit 1
+  echo "WARNING: ARCH environment variable not set. Defaulting to arm64"
+  export ARCH=arm64
 fi
 
 if [ -z "$CROSS_COMPILE" ]; then
-  echo "ERROR: CROSS_COMPILE environment variable not set"
-  exit 1
+  echo "WARNING: CROSS_COMPILE environment variable not set. Defaulting to aarch64-linux-gnu-"
+  export CROSS_COMPILE=aarch64-linux-gnu-
 fi
 
 echo "Building for architecture: $ARCH"
